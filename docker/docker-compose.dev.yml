@@ -1,0 +1,26 @@
+services:
+  backend:
+    build: 
+      context: ../node
+      target: development
+    volumes:
+      - ../node:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    command: npm run dev
+
+  frontend:
+    build:
+      context: ../react
+      target: development
+    volumes:
+      - ../react:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "5173:5173"
+    env_file:
+      - .env
+    command: npm run dev

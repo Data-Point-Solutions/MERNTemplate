@@ -1,0 +1,7 @@
+.next
+node_modules
+.tap
+.husky
+.github
+build
+coverage

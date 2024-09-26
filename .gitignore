@@ -1,0 +1,21 @@
+# Standard files and folders for .gitignore
+node_modules
+logs
+dist
+build
+
+# Environment specific .gitignores
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Ignore .DS_Store files
+.DS_Store
+
+# Ignore notes and markdown files
+TODO.md
+ProjectChecklist.md
+ProjectJournal.md
+ProjectNotes.md

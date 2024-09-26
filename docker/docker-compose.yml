@@ -1,0 +1,20 @@
+services:
+  backend:
+    build: 
+      context: ../node
+      target: production
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+
+  frontend:
+    build:
+      context: ../react
+      target: production
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    env_file:
+      - .env

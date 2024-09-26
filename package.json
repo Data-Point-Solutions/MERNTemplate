@@ -1,0 +1,27 @@
+{
+  "name": "mernstacktemplate",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "prepare": "husky",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md,less}"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,scss,md,less}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "commitlint": "^19.5.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "markdownlint": "^0.35.0",
+    "markdownlint-cli": "^0.42.0",
+    "prettier": "^3.3.3"
+  }
+}
