@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import logo from '../../assets/images/logo.svg'
+import './originalApp.module.css'
 
 interface AppProps {}
 

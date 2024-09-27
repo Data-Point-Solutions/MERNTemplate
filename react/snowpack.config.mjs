@@ -10,26 +10,24 @@ export default {
     [
       '@snowpack/plugin-typescript',
       {
-        /* Yarn PnP workaround: see https://www.npmjs.com/package/@snowpack/plugin-typescript */
         ...(process.versions.pnp ? { tsc: 'yarn pnpify tsc' } : {}),
       },
     ],
   ],
   routes: [
-    /* Enable an SPA Fallback in development: */
-    // {"match": "routes", "src": ".*", "dest": "/index.html"},
+    // SPA Fallback in development
   ],
   optimize: {
-    /* Example: Bundle your final build: */
-    // "bundle": true,
+    // Bundle your final build if needed
   },
   packageOptions: {
-    /* ... */
+    external: ['@testing-library/jest-dom'], // Add this line
+    knownEntrypoints: ['@testing-library/jest-dom/extend-expect']
   },
   devOptions: {
-    /* ... */
+    // Add any additional dev options if necessary
   },
   buildOptions: {
-    /* ... */
+    // Add any additional build options if necessary
   },
 };
