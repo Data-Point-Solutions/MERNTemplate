@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "prepare": "husky",
+    "prepare": "git config core.hooksPath .hooks",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md,less}"
   },
   "husky": {
@@ -17,8 +17,11 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@commitlint/format": "^19.5.0",
     "commitlint": "^19.5.0",
-    "husky": "^9.1.6",
+    "conventional-changelog-atom": "^5.0.0",
     "lint-staged": "^15.2.10",
     "markdownlint": "^0.35.0",
     "markdownlint-cli": "^0.42.0",

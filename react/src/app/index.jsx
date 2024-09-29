@@ -16,7 +16,7 @@ root.render(
         <AppRouter />
       </Router>
     </ChakraProvider>
-  </StrictMode>
+  </StrictMode>,
 );
 
 // Hot Module Replacement (HMR) - Remove this snippet to remove HMR.

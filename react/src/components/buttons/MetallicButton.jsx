@@ -38,11 +38,13 @@ const MetallicButton = ({ color = 'blue', ...props }) => {
         color: 'white',
         _hover: {
           background: `linear-gradient(180deg, ${colors[color].main} 0%, ${colors[color].dark} 100%)`,
-          boxShadow: '0 7px 14px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08)',
+          boxShadow:
+            '0 7px 14px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08)',
         },
         _active: {
           background: `linear-gradient(180deg, ${colors[color].dark} 0%, ${colors[color].main} 100%)`,
-          boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08)',
+          boxShadow:
+            '0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08)',
           transform: 'translateY(2px)',
         },
       }}
