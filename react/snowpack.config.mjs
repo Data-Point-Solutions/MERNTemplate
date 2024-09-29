@@ -5,31 +5,47 @@ export default {
     src: { url: '/dist' },
   },
   plugins: [
-    '@snowpack/plugin-react-refresh',
+    '@snowpack/plugin-react-refresh', 
     '@snowpack/plugin-dotenv',
-    [
-      '@snowpack/plugin-typescript',
-      {
-        /* Yarn PnP workaround: see https://www.npmjs.com/package/@snowpack/plugin-typescript */
-        ...(process.versions.pnp ? { tsc: 'yarn pnpify tsc' } : {}),
-      },
-    ],
+    '@snowpack/plugin-sass',
+    // '@snowpack/web-test-runner-plugin',
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
-    // {"match": "routes", "src": ".*", "dest": "/index.html"},
+    {"match": "routes", "src": ".*", "dest": "/index.html"},
   ],
   optimize: {
     /* Example: Bundle your final build: */
-    // "bundle": true,
+    "bundle": true,
+    "minify": true,
+    "target": 'latest',
   },
   packageOptions: {
-    /* ... */
+    knownEntrypoints: [
+      'react',
+      'react-dom',
+      '@emotion/react',
+      '@emotion/styled',
+      'framer-motion',
+    ],
   },
   devOptions: {
     /* ... */
+    open: 'none',
   },
   buildOptions: {
     /* ... */
+  },
+  resolve: {
+    extensions: [
+      '.js',
+      '.jsx',
+      '.ts',
+      '.tsx',
+    ],
+  },
+  alias: {
+    '.tsx': '.jsx',
+    '.ts': '.js',
   },
 };

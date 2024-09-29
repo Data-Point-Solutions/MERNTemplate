@@ -1,3 +1,4 @@
+import eslint from 'eslint';
 import eslintPluginReact from 'eslint-plugin-react';
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
 import eslintPluginReactRefresh from 'eslint-plugin-react-refresh';
@@ -7,21 +8,24 @@ import eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y';
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import eslintConfigGoogle from 'eslint-config-google';
-import globals from 'globals';
 import eslintConfigPrettier from 'eslint-config-prettier';
-import tseslint from 'typescript-eslint';
-import eslintPluginJest from 'eslint-plugin-jest';
+import globals from 'globals';
+import { languageOptions } from 'eslint-plugin-import/config/flat/react';
 
-/** @type {import('eslint').Linter.Config} */
-export default tseslint.config(
-    { ignores: ['dist'] },
+export default eslint.config(
+    { ignores: [
+        'dist'
+    ]},
     {
-        extends: [eslintPluginReact.configs.recommended, ...tseslint.configs.recommended],
+        extends: [
+            eslintPluginReact.configs.recommended,
+            ...eslint.config.recommended
+        ],
         files: ['**/*.{ts,tsx,js,jsx}'],
         languageOptions: {
             ecmaVersion: 'latest',
         },
-        plugins: {
+        plugin: {
             'react-hooks': eslintPluginReactHooks,
             'react-refresh': eslintPluginReactRefresh,
             'import': eslintPluginImport,
@@ -56,4 +60,4 @@ export default tseslint.config(
             },
         ],
     },
-);
+)

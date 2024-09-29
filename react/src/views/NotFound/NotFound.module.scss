@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100svh;
+  background-color: #333;
+}
+
+.title {
+  font-size: 2rem;
+  color: #ff0000;
+}
+
+.message {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(180deg, #4da3ff 0%, #3d7be5 100%);
+  border: none;
+  border-radius: 5px;
+  box-shadow:
+    0 4px 6px rgba(50, 50, 93, 0.11),
+    0 1px 3px rgba(0, 0, 0, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  position: relative;
+  top: 0;
+
+  &:hover {
+    background: linear-gradient(180deg, #5aadff 0%, #4787f0 100%);
+    box-shadow:
+      0 7px 14px rgba(50, 50, 93, 0.1),
+      0 3px 6px rgba(0, 0, 0, 0.08),
+      inset 0 1px 1px rgba(255, 255, 255, 0.4),
+      inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    top: 2px;
+    background: linear-gradient(180deg, #3d7be5 0%, #4da3ff 100%);
+    box-shadow:
+      0 2px 4px rgba(50, 50, 93, 0.1),
+      0 1px 2px rgba(0, 0, 0, 0.08),
+      inset 0 -1px 1px rgba(255, 255, 255, 0.2),
+      inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
+}
