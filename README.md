@@ -4,7 +4,7 @@
 
 This is a comprehensive MERN (MongoDB, Express, React, Node.js) stack project
 template designed for quick setup and flexible development. It features a
-standard CommonJS Express backend, an ESModule TypeScript React frontend built
+standard CommonJS Express backend, an ESModule React frontend built
 with Snowpack, MongoDB Atlas integration, and Docker support.
 
 ## Key Features
@@ -29,7 +29,7 @@ with Snowpack, MongoDB Atlas integration, and Docker support.
 
 ### Frontend
 
-- React (with TypeScript)
+- React
 - Snowpack
 - Jest and React Testing Library
 
