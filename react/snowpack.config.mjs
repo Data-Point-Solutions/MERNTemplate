@@ -5,38 +5,46 @@ export default {
     src: { url: '/dist' },
   },
   plugins: [
-    '@snowpack/plugin-react-refresh',
+    '@snowpack/plugin-react-refresh', 
     '@snowpack/plugin-dotenv',
-    [
-      '@snowpack/plugin-typescript',
-      {
-        ...(process.versions.pnp ? { tsc: 'yarn pnpify tsc' } : {}),
-      },
-    ],
+    '@snowpack/plugin-sass',
+    // '@snowpack/web-test-runner-plugin',
   ],
   routes: [
-    // SPA Fallback in development
-    { match: 'routes', src: '.*', dest: '/index.html' },
+    /* Enable an SPA Fallback in development: */
+    {"match": "routes", "src": ".*", "dest": "/index.html"},
   ],
   optimize: {
-    // Bundle your final build if needed
+    /* Example: Bundle your final build: */
+    "bundle": true,
+    "minify": true,
+    "target": 'latest',
   },
   packageOptions: {
-    external: ['@testing-library/jest-dom'], // Add this line
-    knownEntrypoints: ['@testing-library/jest-dom/extend-expect']
+    knownEntrypoints: [
+      'react',
+      'react-dom',
+      '@emotion/react',
+      '@emotion/styled',
+      'framer-motion',
+    ],
   },
   devOptions: {
-    // Add any additional dev options if necessary
+    /* ... */
     open: 'none',
   },
   buildOptions: {
-    // Add any additional build options if necessary
+    /* ... */
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    extensions: [
+      '.js',
+      '.jsx',
+      '.ts',
+      '.tsx',
+    ],
   },
   alias: {
-    // Add any additional aliases if necessary
     '.tsx': '.jsx',
     '.ts': '.js',
   },
