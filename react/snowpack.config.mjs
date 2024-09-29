@@ -16,6 +16,7 @@ export default {
   ],
   routes: [
     // SPA Fallback in development
+    { match: 'routes', src: '.*', dest: '/index.html' },
   ],
   optimize: {
     // Bundle your final build if needed
@@ -26,8 +27,17 @@ export default {
   },
   devOptions: {
     // Add any additional dev options if necessary
+    open: 'none',
   },
   buildOptions: {
     // Add any additional build options if necessary
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+  },
+  alias: {
+    // Add any additional aliases if necessary
+    '.tsx': '.jsx',
+    '.ts': '.js',
   },
 };

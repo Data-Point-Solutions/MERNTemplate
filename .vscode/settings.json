@@ -1,5 +1,7 @@
 {
   "cSpell.words": [
+    "antd",
+    "chakra",
     "commitlint",
     "cssnano",
     "flexbugs",
@@ -7,10 +9,13 @@
     "localforage",
     "MERN",
     "mernstacktemplate",
+    "noopener",
+    "noreferrer",
     "optimizelegibility",
     "Parens",
     "reduxjs",
     "stylelint",
-    "tseslint"
+    "tseslint",
+    "webfonts"
   ]
 }
