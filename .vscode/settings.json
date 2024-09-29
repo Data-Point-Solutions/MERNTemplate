@@ -17,5 +17,38 @@
     "stylelint",
     "tseslint",
     "webfonts"
-  ]
+  ],
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+  "editor.parameterHints.enabled": false,
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.hover.enabled": false,
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.tree.indent": 15,
+  "workbench.colorCustomizations": {
+    "tree.indentGuidesStroke": "#AFFF00",
+    "list.activeSelectionForeground": "#AFFF00",
+    "editorIndentGuide.background1": "#AFFF00",
+    "editorIndentGuide.activeBackground1": "#FF004D"
+  },
+  "editor.fontFamily": "Fira Code Retina",
+  "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'zero', 'onum'",
+  "terminal.integrated.fontFamily": "Fira Code Retina",
+  "editor.wordWrap": "on",
+  "editor.minimap.autohide": true,
+  "codeium.enableConfig": {
+    "*": true,
+    "markdown": true,
+    "tailwindcss": true,
+    "pip-requirements": true,
+    "gitignore": true,
+    "properties": true,
+    "plaintext": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
 }

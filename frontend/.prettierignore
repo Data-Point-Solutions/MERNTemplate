@@ -1,0 +1,7 @@
+# Ignore artifacts:
+dist
+build
+coverage
+node_modules
+.github
+.husky
